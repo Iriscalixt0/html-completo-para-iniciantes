@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev's em prática!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2 id="inicio">Bem-vindo, futuro Dev!</h2>
+      <h1>HTML do Zero: Guia Completo para Iniciantes</h1>
+
+      <input type="checkbox" id="toggle-menu" />
+      <label for="toggle-menu">Mostrar / Ocultar Menu</label>
+      <section class="menu">
+        <nav aria-label="Menu de navegação">
+          <ul>
+            <li><a href="#html">1 - O que é HTML e por que ele importa?</a></li>
+            <li><a href="#tags">2 - Tags básicas e a estrutura do HTML</a></li>
+            <li><a href="#divspan">3 - Diferença entre Div e Span</a></li>
+            <li>
+              <a href="#organizacao"
+                >4 - Como organizar conteúdo com Section, Article, Aside e
+                Nav</a
+              >
+            </li>
+            <li>
+              <a href="#formularios">5 - Formulários com Fieldset e Legend</a>
+            </li>
+            <li>
+              <a href="#midias"
+                >6 - Trabalhando com mídia: Vídeos, Áudios e Legendas</a
+              >
+            </li>
+            <li>
+              <a href="#conteudo-externo"
+                >7 - Incorporando conteúdo externo com Iframe</a
+              >
+            </li>
+            <li>
+              <a href="#tabelas"
+                >8 - Entendendo Tabelas: Table, Tr, Td, Th e mais</a
+              >
+            </li>
+            <li><a href="#citacoes">9 - Citações: Blockquote, Q e Cite</a></li>
+            <li>
+              <a href="#imagens"
+                >10 - Imagens e legendas: Figure, Figcaption, Picture e
+                Source</a
+              >
+            </li>
+            <li>
+              <a href="#acessibilidade"
+                >11 - Acessibilidade e SEO: DOM, ARIA e boas práticas</a
+              >
+            </li>
+            <li>
+              <a href="#praticando">12 - Praticando com um mini-projeto</a>
+            </li>
+            <li><a href="#conclusao">13 - Conclusão</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <article role="region" aria-labelledby="html" class="sec-html">
+        <hr />
+        <h2 id="html">O que é HTML e por que ele importa?</h2>
+        <a href="#inicio">
+          <button aria-label="Voltar para o índice">voltar</button>
+        </a>
+        <p>
+          Sabe aquele site incrível que você acessa todo dia? Com imagens
+          bonitas, textos organizados, botões chamativos e vídeos tocando? Pois
+          é —
+          <i>tudo isso começa com uma coisinha chamada HTML.</i>
+        </p>
+        <br />
+        <p>
+          <strong>HTML</strong>
+          <mark
+            >(ou HyperText Markup Language, se você quiser impressionar
+            alguém)</mark
+          >
+          é a linguagem usada para construir a estrutura das páginas da web.
+          Pense nele como <strong>o esqueleto da internet</strong>. <br /><br />
+          Sem HTML, a web seria só um monte de texto bagunçado — sem negrito,
+          sem imagens, sem links, sem graça.
+          <br /><br />
+          Com HTML, você diz pro navegador:
+        </p>
+        <blockquote>
+          👉 “Ei, isso aqui é um título!”<br />
+          👉 “Isso é um parágrafo!”<br />
+          👉 “Coloca essa imagem aqui, esse botão ali, e faz esse formulário
+          bonito aparecer!”
+        </blockquote>
+        <br />
+        <p>
+          Ele não se preocupa muito com estilo — <i>essa é a praia do CSS</i> —
+          mas é o HTML que <strong>organiza o show</strong>. <br /><br />
+          Agora, <strong>por que aprender HTML?</strong> Porque é o primeiro
+          passo para criar seu próprio cantinho na internet. Seja um site
+          pessoal, um blog, uma loja virtual ou até um app web —
+          <u>tudo começa com um bom HTML.</u>
+        </p>
+        <br />
+        <p>
+          E a melhor parte? <strong>Não é um bicho de sete cabeças.</strong>
+          <br />
+          Com poucos comandos, você já consegue montar uma página inteira!
+          <br /><br />
+          Além disso, entender HTML te ajuda a:
+        </p>
+        <ul>
+          <li>Criar conteúdo melhor estruturado (ótimo pra SEO!)</li>
+          <li>
+            Customizar sites além do que os construtores automáticos permitem
+          </li>
+          <li>
+            Desvendar os bastidores da internet — sim, você pode olhar o código
+            de qualquer site apertando <code>F12</code>
+            <i>(como um verdadeiro hacker educado 👀)</i>
+          </li>
+        </ul>
+
+        <br />
+        <p>
+          Então, se você sempre quis entender como os sites funcionam por trás
+          das cortinas,
+          <strong>HTML é o lugar perfeito para começar</strong>.
+          <br />
+          Fácil, direto ao ponto, e — <i>acredite</i> — até divertido de
+          aprender!
+        </p>
+        <hr />
+      </article>
+      <article role="region" aria-labelledby="tags">
+        <h2 id="tags">Tags básicas e a estrutura do HTML</h2>
+        <a href="#inicio">
+          <button aria-label="Voltar para o índice">voltar</button>
+        </a>
+        <p>
+          Imagine que o HTML é como a receita mágica que diz para o navegador o
+          que cada pedacinho da sua página significa. E essa receita é escrita
+          com comandos especiais chamados tags —
+          <i>que são tipo os ingredientes do bolo da web!</i>
+        </p>
+        <blockquote>
+          Por exemplo, temos as tags de título: &lt;h1&gt; até &lt;h6&gt;. Pense
+          nelas como chefes de diferentes níveis — o
+          <strong>&lt;h1&gt; é o chef master</strong>, o título mais importante,
+          e o <strong>&lt;h6&gt; é o assistente</strong>, mais discreto e menos
+          destacado.
+        </blockquote>
+        <p>
+          Quer escrever um texto normal, aquele que conta uma história ou
+          explica algo? Aí entra a
+          <mark>tag &lt;p&gt;</mark>, que é como o papel de carta para suas
+          palavras. <br /><br />
+          E para levar seus visitantes para outro lugar — tipo um portal mágico
+          — usamos a
+          <mark>tag &lt;a&gt;</mark>. Ela cria links clicáveis que transportam
+          para outras páginas ou até para sites diferentes. <br /><br />
+          Essas tags não são só para deixar sua página bonita —
+          <i
+            >elas ajudam o navegador a entender direitinho o que mostrar e ainda
+            deixam o Google superfeliz porque consegue ler seu site direitinho
+            para mostrar nos resultados de busca!</i
+          >
+          <br /><br />
+          Veja um exemplo de como utilizamos cada tag:
+        </p>
+        <hr />
+        <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Meu Primeiro Site&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+        &lt;!-- Título principal da página --&gt;
+        &lt;h1&gt;🌟 Bem-vindo ao Meu Site Incrível! 🌟&lt;/h1&gt;
+
+        &lt;!-- Um parágrafo de boas-vindas --&gt;
+        &lt;p&gt;Esse é o meu primeiro site usando HTML. 
+        Estou aprendendo a usar tags e estou adorando!&lt;/p&gt;
+
+        &lt;!-- Outro parágrafo com um link --&gt;
+        &lt;p&gt;Quer ver mais sobre HTML? 
+          &lt;a href="https://www.w3schools.com/" 
+          target="_blank" &gt;Clique aqui e descubra!&lt;/a&gt;
+        &lt;/p&gt;
+        
+      &lt;/body&gt;
+      &lt;/html&gt;
+        </pre>
+      </article>
+      <article role="region" aria-labelledby="divspan">
+        <h2 id="divspan">Diferença entre Div e Span</h2>
+        <a href="#inicio">
+          <button aria-label="Voltar para o índice">voltar</button>
+        </a>
+        <p>
+          No HTML, tanto a <strong>&lt;div&gt;</strong> quanto a
+          <strong>&lt;span&gt;</strong> são como caixinhas invisíveis que servem
+          para organizar ou estilizar partes do conteúdo. Mas cada uma tem sua
+          função específica no palco da web:
+        </p>
+        <blockquote>
+          🔹 <strong>&lt;div&gt;</strong>: a caixa grandona de bloco.
+          <br /><br />
+          Pense nela como uma gaveta grande onde você guarda
+          <strong>vários itens juntos</strong> —
+          <i>texto, imagens, botões, tudo!</i>
+          <br />
+          A <strong>&lt;div&gt;</strong> é usada para
+          <strong>agrupar blocos inteiros de conteúdo.</strong>
+          Ela cria um novo “andaime” na estrutura da página, empurrando o
+          conteúdo para uma nova linha.
+        </blockquote>
+        <blockquote>
+          🔸 <strong>&lt;span&gt;</strong>: a caixinha pequena e discreta.
+          <br /><br />
+          Já o <strong>&lt;span&gt;</strong> é como um marca-texto dentro do
+          parágrafo. Ele serve para
+          <strong>destacar partes específicas</strong> dentro de um texto, como
+          uma palavra ou frase que você quer colorir ou estilizar. <br /><br />
+          Diferente da <strong>&lt;div&gt;</strong>, o
+          <strong>&lt;span&gt;</strong> não quebra a linha, ou seja, é “inline”.
+        </blockquote>
+      </article>
+      <article role="region" aria-labelledby="organizacao">
+        <h2 id="organizacao">
+          Como organizar conteúdo com Section, Article, Aside e Nav
+        </h2>
+        <a href="#inicio">
+          <button aria-label="Voltar para o índice">voltar</button>
+        </a>
+        <p>
+          Na hora de construir um site, não basta só jogar tudo na tela.
+          <strong
+            ><i
+              >É preciso organizar o conteúdo para que os visitantes (e os robôs
+              do Google) consigam entender direitinho o que é o quê.</i
+            ></strong
+          >
+          <br /><br />
+          E é aí que entram as tags semânticas do HTML —
+          <u
+            >elas dão significado para cada parte do site. Vamos conhecer as
+            principais:</u
+          >
+        </p>
+        <br />
+        <p>🔷 &lt;section&gt; — A seção do show!</p>
+        <p>
+          Use essa tag para dividir o
+          <strong>conteúdo em grandes blocos temáticos</strong>, como se fossem
+          capítulos de um livro ou seções de um jornal.
+          <br />
+          <i>É ideal para agrupar conteúdo relacionado.</i>
+        </p>
+        <p>💡 Exemplo: Uma seção "Sobre Mim" ou "Serviços".</p>
+        <hr />
+
+        <p>📰 &lt;article&gt; — O conteúdo principal da notícia!</p>
+        <p>
+          É usada para um conteúdo independente e completo,
+          <strong>que faz sentido sozinho.</strong>
+        </p>
+        <p>
+          💡 Exemplo: Um artigo com título, texto e autor publicado no blog.
+        </p>
+        <hr />
+
+        <p>📎 &lt;aside&gt; — O conteúdo do ladinho!</p>
+        <p>
+          Serve para mostrar informações <strong>complementares</strong>, que
+          não fazem parte direta do conteúdo principal.
+          <br />
+          <i>Ideal para dicas, links extras ou anúncios.</i>
+        </p>
+        <p>
+          💡 Exemplo: Uma barra lateral com "Leia também" ou uma propaganda.
+        </p>
+        <hr />
+
+        <p>🧭 &lt;nav&gt; — A bússola do seu site!</p>
+        <p>
+          Essa tag é usada para <strong>áreas de navegação</strong>, como menus
+          com links para outras partes do site.
+          <br />
+          <i>Ajuda o usuário a se localizar.</i>
+        </p>
+        <p>
+          💡 Exemplo: Um menu no topo com links como "Início", "Blog",
+          "Contato".
+        </p>
+        <hr />
+
+        <p>
+          <strong>Por que isso importa?</strong>
+          <br />
+          Usar essas tags corretamente não só deixa seu site mais
+          <mark>organizado e acessível</mark>, como também faz com que
+          mecanismos de busca (como o Google) e leitores de tela entendam melhor
+          o conteúdo — o que é ótimo para
+          <mark>SEO e para a acessibilidade.</mark>
+        </p>
+      </article>
+
+      <article role="region" aria-labelledby="formularios">
+        <h2 id="formularios">Formulários com Fieldset e Legend</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          Formulários são como pequenas entrevistas que o seu site faz com o
+          visitante — você faz perguntas, ele responde. Mas, para que tudo fique
+          organizado e fácil de entender, existe uma dupla poderosa no HTML:
+          <strong>&lt;fieldset&gt;</strong> e <strong>&lt;legend&gt;</strong>.
+        </p>
+        <br />
+
+        <p>🔹 <strong>&lt;fieldset&gt;</strong> — A caixa organizadora!</p>
+        <p>
+          Essa tag cria uma “caixinha” ao redor de um grupo de campos
+          relacionados.
+          <br />
+          É como se você estivesse separando as perguntas em
+          <strong>blocos organizados</strong>, tipo “Informações Pessoais” ou
+          “Endereço”.
+        </p>
+        <br />
+
+        <p>🔸 <strong>&lt;legend&gt;</strong> — O título da caixa!</p>
+        <p>
+          Ela é o <strong>título do &lt;fieldset&gt;</strong>. Serve para
+          explicar rapidamente o que aquele grupo de perguntas significa.
+          <br />
+          <i>Exemplo: “Informações de Contato”, “Dados de Entrega”, etc.</i>
+        </p>
+        <br />
+
+        <p>
+          💡 Usar essas tags não só deixa seu formulário
+          <strong>visualmente mais bonito</strong>, como também melhora a
+          <u>acessibilidade</u> — leitores de tela conseguem entender melhor e
+          navegar com mais facilidade.
+        </p>
+        <hr />
+
+        <p><strong>🔧 Exemplo em HTML:</strong></p>
+
+        <pre>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Informações Pessoais&lt;/legend&gt;
+
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="nome" name="nome"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;E-mail:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="idade"&gt;Idade:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="number" id="idade" name="idade"&gt;&lt;br&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre
+        >
+        <hr />
+      </article>
+
+      <article role="region" aria-labelledby="midias">
+        <h2 id="midias">Trabalhando com mídia: Vídeos, Áudios e Legendas</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          Quer deixar seu site mais <em>interativo e animado</em>?
+          <strong>Vídeos e áudios</strong> são os protagonistas da festa!
+        </p>
+
+        <hr />
+
+        <h2>🎥 Vídeo</h2>
+        <p>
+          Com a tag <mark>&lt;video&gt;</mark>, você coloca um vídeo direto na
+          página para o visitante assistir sem precisar sair. É só usar assim:
+        </p>
+        <br />
+        <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="meu-video.mp4" type="video/mp4"&gt;
+  Seu navegador não suporta o elemento de vídeo.
+&lt;/video&gt;
+  </code></pre>
+
+        <hr />
+
+        <h2>🎵 Áudio</h2>
+        <p>
+          Quer adicionar música, sons ou podcasts? A tag
+          <mark>&lt;audio&gt;</mark> faz isso fácil, com controles para tocar,
+          pausar e ajustar volume:
+        </p>
+        <br />
+        <pre><code>&lt;audio controls&gt;
+  &lt;source src="minha-musica.mp3" type="audio/mpeg"&gt;
+  Seu navegador não suporta o elemento de áudio.
+&lt;/audio&gt;
+  </code></pre>
+
+        <hr />
+
+        <h2>💬 Legendas</h2>
+        <p>
+          Para deixar seus vídeos <strong>acessíveis e compreensíveis</strong>,
+          use a tag <mark>&lt;track&gt;</mark> dentro do
+          <mark>&lt;video&gt;</mark>. Ela adiciona legendas, que ajudam quem não
+          pode ouvir ou prefere outra língua:
+        </p>
+        <br />
+        <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="meu-video.mp4" type="video/mp4"&gt;
+  &lt;track kind="subtitles" src="legendas.vtt" srclang="pt" label="Português" default&gt;
+  Seu navegador não suporta o elemento de vídeo.
+&lt;/video&gt;
+  </code></pre>
+
+        <p>
+          A tag <mark>&lt;track&gt;</mark> traz legendas no arquivo
+          <code>.vtt</code>, e você pode incluir várias para diferentes idiomas!
+        </p>
+
+        <hr />
+
+        <p>
+          Usar <strong>vídeo, áudio e legendas</strong> deixa seu site mais
+          <em>acessível, divertido e profissional</em>. <br />
+          Bora dar <em>play</em> nessa experiência?
+        </p>
+      </article>
+
+      <article role="region" aria-labelledby="conteudo-externo">
+        <h2 id="conteudo-externo">Incorporando conteúdo externo com Iframe</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          Sabe aquela janela "mágica" que permite trazer conteúdo de
+          <strong>outros sites</strong> direto para a sua página? Essa é a
+          função do <code>&lt;iframe&gt;</code>!
+        </p>
+        <br />
+        <p>
+          É como se você tivesse um <i>portal</i> dentro do seu site, mostrando
+          vídeos do YouTube, mapas do Google Maps, apresentações, ou até outra
+          página inteira — <i>sem precisar copiar ou hospedar nada.</i>
+        </p>
+        <br />
+        <p>
+          Isso deixa seu site mais <strong>rico, dinâmico</strong> e ainda
+          economiza espaço no seu servidor. <i>Legal, né?</i>
+        </p>
+
+        <hr />
+
+        <h3>Exemplo prático:</h3>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/wLEw36KAVfU?si=g9WXbv6y7owD1Ld-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </article>
+
+      <article role="region" aria-labelledby="tabelas">
+        <h2 id="tabelas">Entendendo Tabelas: Table, Tr, Td, Th e mais</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          As tabelas no HTML são perfeitas para
+          <strong>organizar dados em linhas e colunas</strong> — tipo uma
+          planilha simples, direto na página!
+        </p>
+
+        <hr />
+
+        <p>
+          📦 <mark>&lt;table&gt;</mark> — <i>A estrutura principal</i><br />
+          É a “caixinha” que envolve toda a tabela. Sem ela, nada funciona.
+        </p>
+
+        <p>
+          ➕ <mark>&lt;tr&gt;</mark> — <i>Table Row (linha da tabela)</i><br />
+          Cada <code>&lt;tr&gt;</code> representa uma <strong>linha</strong> da
+          tabela. Você pode ter várias!
+        </p>
+
+        <p>
+          🔢 <mark>&lt;td&gt;</mark> — <i>Table Data (célula de dado)</i><br />
+          São as <strong>células comuns</strong>, onde os dados ficam dentro de
+          cada linha.
+        </p>
+
+        <p>
+          🏷️ <mark>&lt;th&gt;</mark> — <i>Table Header (cabeçalho da tabela)</i
+          ><br />
+          <br />
+          Essas são as células de <strong>cabeçalho</strong>, geralmente usadas
+          na primeira linha para indicar o que cada coluna representa.<br />
+          <mark>Exemplo: "Nome", "Idade", "E-mail".</mark>
+        </p>
+        <br />
+
+        <p>🧩 <strong>Organização extra:</strong></p>
+        <ul>
+          <li>
+            <mark>&lt;thead&gt;</mark> — Agrupa o <i>cabeçalho</i> da tabela.
+          </li>
+          <li>
+            <mark>&lt;tbody&gt;</mark> — Agrupa o <i>corpo</i>, ou seja, os
+            dados principais.
+          </li>
+          <li>
+            <mark>&lt;tfoot&gt;</mark> — Agrupa o <i>rodapé</i>, útil para
+            totais ou observações.
+          </li>
+        </ul>
+        <br />
+        <p>
+          🧷 <mark>&lt;colspan&gt;</mark> — <i>Unindo células horizontalmente</i
+          ><br />
+          Você pode usar o atributo <code>colspan</code> para uma célula ocupar
+          o espaço de várias colunas.<br />
+          <em>Isso é ótimo para criar títulos centrais ou seções agrupadas.</em>
+        </p>
+
+        <hr />
+
+        <p>
+          🧠 <strong>Por que usar tudo isso?</strong><br />
+          Além de deixar a visualização mais
+          <strong>clara e profissional</strong>, essas marcações ajudam
+          ferramentas de acessibilidade (como leitores de tela) a interpretar
+          melhor os dados.<br />
+          <br />
+          Ou seja,
+          <strong
+            >fica mais bonito para os olhos e mais acessível para todos</strong
+          >!
+        </p>
+
+        <hr />
+
+        <h3>💡 Exemplo simples de tabela:</h3>
+        <br />
+
+        <pre><code>&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th&gt;Idade&lt;/th&gt;
+      &lt;th&gt;Cidade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;João&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;São Paulo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Maria&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;Rio de Janeiro&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="3"&gt;&lt;em&gt;Dados atualizados em 2025&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+  </code></pre>
+
+        <h3>Resultado:</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Cidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>João</td>
+              <td>25</td>
+              <td>São Paulo</td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>30</td>
+              <td>Rio de Janeiro</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"><em>Dados atualizados em 2025</em></td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+
+      <article role="region" aria-labelledby="citacoes">
+        <h2 id="citacoes">Citações: Blockquote, Q e Cite</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          Sabe quando você quer usar uma frase impactante de alguém famoso, um
+          trecho de um livro ou até mesmo um comentário legal de outro site? O
+          HTML tem <strong>tags próprias para lidar com citações</strong>, e
+          usá-las do jeito certo deixa seu conteúdo
+          <mark>mais profissional, acessível e respeitoso com os autores</mark>.
+        </p>
+
+        <hr />
+
+        <h3>🔹 <code>&lt;blockquote&gt;</code> — Para citações longas</h3>
+        <p>
+          Ideal para trechos maiores de texto que vêm de outra fonte. O
+          navegador costuma destacar com recuo automático.
+          <i
+            >É perfeita para destacar reflexões, trechos de livros ou falas
+            extensas.</i
+          >
+        </p>
+
+        <blockquote>
+          <p><i>"A simplicidade é o último grau da sofisticação."</i></p>
+          <p><cite>— Leonardo da Vinci</cite></p>
+        </blockquote>
+
+        <hr />
+
+        <h3>🔸 <code>&lt;q&gt;</code> — Para citações curtas</h3>
+        <p>
+          Essa tag é usada dentro de um parágrafo, para citações rápidas. O
+          navegador adiciona aspas automaticamente.
+        </p>
+
+        <p>
+          Como diria Albert Einstein:
+          <q>A imaginação é mais importante que o conhecimento.</q>
+        </p>
+
+        <hr />
+
+        <h3>📚 <code>&lt;cite&gt;</code> — Para indicar a fonte</h3>
+        <p>
+          Use essa tag para indicar a <strong>fonte de uma citação</strong> ou o
+          nome de uma obra (como livros, filmes, músicas etc.). Isso mostra
+          respeito pela autoria e melhora a semântica da sua página.
+        </p>
+
+        <p>
+          Esse trecho é do clássico <cite>Dom Casmurro</cite>, escrito por
+          Machado de Assis.
+        </p>
+
+        <hr />
+
+        <p>
+          <strong>💡 Por que usar essas tags?</strong><br />
+          Além de deixar seu site mais bonito e organizado, essas tags ajudam
+          leitores de tela e mecanismos de busca a entender melhor o conteúdo.
+          <mark
+            >Você valoriza o conteúdo original, melhora a acessibilidade e ainda
+            dá aquele toque de elegância ao seu HTML!</mark
+          >
+        </p>
+      </article>
+
+      <article role="region" aria-labelledby="imagens">
+        <h2 id="imagens">
+          Imagens e legendas: Figure, Figcaption, Picture e Source
+        </h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+
+        <p>
+          No HTML, uma imagem não precisa ser só bonita — ela pode ser
+          <strong>semântica, descritiva e inteligente</strong>. Usando as tags
+          certas, você melhora a
+          <mark>acessibilidade, organização e responsividade</mark> do seu site.
+        </p>
+
+        <hr />
+
+        <h3>
+          🖼️ <code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code>
+        </h3>
+        <p>
+          A dupla dinâmica para imagens com significado! A tag
+          <code>&lt;figure&gt;</code> é um contêiner que agrupa a imagem com sua
+          legenda. E a <code>&lt;figcaption&gt;</code> é onde você descreve o
+          que está sendo mostrado.
+          <i>Ótimo para portfólios, artigos e páginas explicativas.</i>
+        </p>
+
+        <figure>
+          <img
+            src="por-do-sol.png"
+            alt="Foto de uma paisagem natural ao pôr do sol"
+            width="300"
+          />
+          <figcaption><em>Uma vista incrível ao entardecer.</em></figcaption>
+        </figure>
+
+        <hr />
+
+        <h3>📱 <code>&lt;picture&gt;</code> + <code>&lt;source&gt;</code></h3>
+        <p>
+          Com essas tags, você pode exibir
+          <strong
+            >imagens diferentes dependendo do tamanho da tela ou do
+            dispositivo</strong
+          >. Isso deixa seu site mais <mark>leve, adaptável e moderno</mark>.
+        </p>
+
+        <p>
+          <i
+            >Exemplo: Mostrar uma imagem menor no celular e uma maior no
+            computador.</i
+          >
+        </p>
+
+        <picture>
+          <source media="(max-width: 600px)" srcset="img-mobile.png" />
+          <source media="(min-width: 601px)" srcset="por-do-sol-natural.png" />
+          <img
+            src="por-do-sol-natural.png"
+            alt="Paisagens em diferentes resoluções"
+            width="100%"
+          />
+        </picture>
+
+        <hr />
+
+        <p>
+          <strong>💡 Por que usar essas tags?</strong><br />
+          ✅ <mark>Mais controle sobre o layout</mark><br />
+          ✅ <mark>Melhor performance em dispositivos móveis</mark><br />
+          ✅ <mark>Acessibilidade e contexto para todos os usuários</mark
+          ><br /><br />
+          Com essas ferramentas, suas imagens não são só bonitas — elas são
+          inteligentes e inclusivas!
+        </p>
+      </article>
+
+      <article role="region" aria-labelledby="acessibilidade">
+        <h2 id="acessibilidade">
+          Acessibilidade e SEO: DOM, ARIA e boas práticas
+        </h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          Construir um site bonito é ótimo. Mas construir um site
+          <strong>acessível e fácil de ser encontrado</strong> é ainda melhor!
+          <br />
+
+          Para isso, o HTML conta com recursos como o <mark>DOM</mark>, os
+          atributos <mark>ARIA</mark> e várias técnicas de <mark>SEO</mark> que
+          ajudam seu conteúdo a alcançar mais pessoas.
+        </p>
+
+        <hr />
+
+        <h3>🔧 DOM (Document Object Model)</h3>
+        <p>
+          O <strong>DOM</strong> é como a árvore genealógica da sua página: ele
+          representa toda a estrutura do HTML, com cada tag sendo um "nó" que
+          pode ser acessado e manipulado. É através do DOM que o navegador
+          entende, monta e atualiza o que aparece na tela.
+          <i
+            >Exemplo: Quando um botão é clicado e algo muda sem recarregar a
+            página — é o DOM sendo atualizado por JavaScript!</i
+          >
+        </p>
+
+        <hr />
+
+        <h3>🦮 ARIA (Accessible Rich Internet Applications)</h3>
+        <p>
+          Atributos <code>ARIA</code> tornam seu site
+          <strong>mais acessível para pessoas que usam leitores de tela</strong
+          >. Com eles, você pode descrever a função de elementos que, por
+          padrão, não são claros para tecnologias assistivas.
+        </p>
+        <br />
+        <p><i>Exemplos de atributos ARIA úteis:</i></p>
+        <br />
+        <ul>
+          <li>
+            <code>aria-label="Enviar formulário"</code> — Dá uma descrição
+            personalizada a um botão.
+          </li>
+          <li>
+            <code>aria-hidden="true"</code> — Oculta algo do leitor de tela sem
+            tirá-lo visualmente.
+          </li>
+          <li>
+            <code>aria-expanded="false"</code> — Indica se um menu está aberto
+            ou fechado.
+          </li>
+        </ul>
+
+        <p>
+          <mark
+            >Usar ARIA corretamente garante que mais pessoas consigam navegar e
+            interagir com seu site sem barreiras.</mark
+          >
+        </p>
+
+        <hr />
+
+        <h3>🔍 SEO (Search Engine Optimization)</h3>
+        <p>
+          O SEO ajuda seu site a aparecer nas buscas do Google e outros
+          mecanismos. Isso é feito com boas práticas de HTML e conteúdo
+          relevante.
+          <strong
+            >Não basta só existir na internet — é preciso ser
+            encontrado!</strong
+          >
+        </p>
+        <br />
+        <p><i>Boas práticas de SEO incluem:</i></p>
+        <br />
+        <ul>
+          <li>
+            <strong>Usar tags semânticas:</strong> <code>&lt;header&gt;</code>,
+            <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, etc.
+          </li>
+          <li>
+            <strong>Escrever títulos claros:</strong> com
+            <code>&lt;h1&gt;</code> e <code>&lt;h2&gt;</code> bem estruturados.
+          </li>
+          <li>
+            <strong>Adicionar textos alternativos:</strong> com
+            <code>alt</code> em imagens.
+          </li>
+          <li>
+            <strong>URLs amigáveis</strong> e descrições com
+            <code>&lt;meta description&gt;</code>.
+          </li>
+        </ul>
+
+        <hr />
+
+        <p>
+          <strong>✅ Resumo:</strong><br />
+          <mark>DOM</mark> estrutura sua página, <mark>ARIA</mark> a torna
+          acessível, e <mark>SEO</mark> a faz ser encontrada.<br />
+          Juntos, eles transformam seu site em algo não só bonito, mas
+          funcional, inclusivo e relevante!
+        </p>
+      </article>
+
+      <article role="region" aria-labelledby="praticando">
+        <h2 id="praticando">Praticando com um mini-projeto</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+        <p>
+          <i
+            >Agora que você já sabe os conceitos, que tal montar uma página
+            simples?</i
+          >
+        </p>
+        <br />
+
+        <p>
+          ✔️ <strong>Comece com um título principal</strong> e um
+          <mark>menu de navegação</mark> com links para seções.
+        </p>
+        <br />
+
+        <p>
+          ✔️ <strong>Crie algumas seções</strong> com
+          <mark>artigos e textos</mark>.
+        </p>
+        <br />
+
+        <p>✔️ <strong>Insira um vídeo</strong> com <mark>legenda</mark>.</p>
+        <br />
+
+        <p>
+          ✔️ <strong>Monte uma tabela</strong> com <mark>dados simples</mark>.
+        </p>
+        <br />
+
+        <p>
+          ✔️ <strong>Adicione um formulário</strong> com
+          <mark>grupos organizados por &lt;fieldset&gt;</mark>.
+        </p>
+        <br />
+
+        <p>✔️ <strong>Inclua imagens</strong> com <mark>legendas</mark>.</p>
+        <br />
+
+        <p>
+          ✔️ <strong>Finalize com uma barra lateral</strong> com
+          <mark>informações extras</mark>.
+        </p>
+        <br />
+
+        <hr />
+
+        <p>
+          <strong>💡 Dica final:</strong>
+          <i>Brincar, errar e corrigir é a melhor forma de aprender!</i>
+        </p>
+      </article>
+
+      <article role="region" aria-labelledby="conclusao">
+        <h2 id="conclusao">Conclusão</h2>
+        <a href="#inicio"
+          ><button aria-label="Voltar para o índice">voltar</button></a
+        >
+
+        <p>
+          <strong>HTML é a base da web</strong>, e com ele você cria a estrutura
+          para tudo o que aparece na tela.
+        </p>
+        <br />
+
+        <p>
+          Apesar de parecer muita coisa no começo,
+          <mark>o segredo é ir aos poucos</mark>, praticando e explorando cada
+          tag e conceito.
+        </p>
+        <br />
+
+        <p>
+          <i>E lembre-se:</i> programar é <strong>criar</strong> e
+          <strong>se divertir</strong>.
+        </p>
+        <br />
+
+        <p><mark>Não tenha pressa</mark>, o aprendizado vem com a prática!</p>
+      </article>
+    </main>
+    <footer>
+      <hr />
+      <p>
+        <strong>Obrigado por ler este guia completo sobre HTML.</strong>
+        <br /><br />
+        Espero que ele tenha te ajudado a entender desde os
+        <mark>fundamentos</mark> até os conceitos mais avançados da criação de
+        páginas web.
+      </p>
+      <br />
+
+      <p>
+        Este material foi criado com o objetivo de ser <strong>claro</strong>,
+        <strong>acessível</strong> e <strong>amigável</strong>, até para quem
+        <i>nunca viu uma linha de código</i>. <br /><br />
+        Se você chegou até aqui, <strong>parabéns!</strong> Você já tem uma base
+        muito sólida para continuar aprendendo.
+      </p>
+      <br />
+
+      <p>
+        <i>Lembre-se:</i> a web está sempre mudando, e a melhor forma de
+        acompanhar é
+        <strong>continuar praticando, lendo e experimentando.</strong>
+      </p>
+      <br />
+
+      <p>
+        💡 <strong>Dica final:</strong> salve este conteúdo, volte sempre que
+        precisar revisar e
+        <mark>compartilhe com quem também quer aprender!</mark>
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h3>📬 Contato do autor</h3>
+      <p>
+        <strong>Nome:</strong> Thamiris Calixto<br />
+        <strong>Email:</strong>
+        <a href="mailto:thamiriscalixt8@gmail.com">thamiriscalixt8@gmail.com</a
+        ><br />
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/thamiriscalixt0" target="_blank"
+          >https://www.linkedin.com/in/thamiriscalixt0</a
+        ><br />
+        <strong>GitHub:</strong>
+        <a href="https://github.com/Iriscalixt0" target="_blank"
+          >https://github.com/Iriscalixt0</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

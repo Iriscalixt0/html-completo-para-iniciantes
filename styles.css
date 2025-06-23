@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 1.25em;
+}
+
+header {
+  background-color: #004aad;
+  color: #fff;
+  padding: 1.25em 0.9375em;
+  border-radius: 0.5em;
+  margin-bottom: 1.875em;
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3125em;
+}
+
+header h2#inicio {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.9375em;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+label[for="toggle-menu"] {
+  display: inline-block;
+  margin: 0.625em 0;
+  padding: 0.5em 0.9375em;
+  background-color: #fff0f0;
+  color: #004aad;
+  cursor: pointer;
+  border-radius: 0.3125em;
+  user-select: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+label[for="toggle-menu"]:hover,
+label[for="toggle-menu"]:focus {
+  background-color: #ffd700;
+  outline: none;
+}
+
+.menu nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+#toggle-menu:checked + label + .menu nav {
+  max-height: 187.5em;
+  transition: max-height 0.5s ease-in;
+}
+
+.menu nav ul {
+  list-style: none;
+  padding-right: 0.625em;
+}
+
+.menu nav ul li {
+  margin-bottom: 0.625em;
+}
+
+.menu nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu nav ul li a:hover,
+.menu nav ul li a:focus {
+  color: #ffd700;
+  outline: none;
+}
+
+button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 0.5em 0.875em;
+  border-radius: 0.3125em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin: 0.9375em 0;
+}
+
+button:hover,
+button:focus {
+  background-color: #003580;
+  outline: none;
+}
+
+main article {
+  background-color: white;
+  padding: 1.25em 1.5625em;
+  border-radius: 0.5em;
+  margin-bottom: 2.1875em;
+  box-shadow: 0 0.1875em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+main article h2 {
+  color: #004aad;
+  margin-bottom: 0.9375em;
+  font-size: 1.8rem;
+}
+
+hr {
+  border: none;
+  border-top: 0.125em solid #ddd;
+  margin: 0.9375em 0 1.875em 0;
+}
+
+.visual-tags ul {
+  list-style-type: disc;
+  margin-left: 1.25em;
+  margin-top: 0.625em;
+  margin-bottom: 0.625em;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+mark {
+  background-color: #ffd54f;
+  padding: 0 0.25em;
+  border-radius: 0.1875em;
+}
+
+blockquote {
+  background-color: #f0f4ff;
+  border-left: 0.3125em solid #004aad;
+  margin: 1.25em 0;
+  padding: 0.625em 1.25em;
+  font-style: italic;
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2.5em;
+  line-height: 1.4;
+}
+
+footer hr {
+  margin-bottom: 1.25em;
+}
+
+footer p {
+  margin-bottom: 0.9375em;
+}
+
+a {
+  color: #004aad;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0.625em;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main section {
+    padding: 0.9375em 1.25em;
+  }
+
+  .menu nav {
+    max-height: 12.5em;
+    overflow-y: auto;
+  }
+}
